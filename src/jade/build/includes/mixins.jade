@@ -43,7 +43,7 @@ mixin product(config)
 
 				p.c-product__content__introduction!=config.content
 
-				a.c-product__content__link(href="#{config.link}", title="Find out more about #{config.title}")!=copy.misc.moreInfo
+				a.c-product__content__link(href="#{config.link}", title="#{copy.misc.findOutMore}: #{config.title}")!=copy.misc.moreInfo
 					svg.o-icon.o-icon__arrow-right(viewBox="0 0 32 32")
 						use(xlink:href="#icon__arrow-right")
 
