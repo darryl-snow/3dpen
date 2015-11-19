@@ -1,14 +1,14 @@
 {
-  "name": "project-template",
+  "name": "3dpen",
   "version": "0.0.0",
   "authors": [
     "darryl-snow <dazsnow63@yahoo.com>"
   ],
-  "description": "Front-End templates for Project",
+  "description": "3dpen",
   "main": "public/index.html",
   "keywords": [
   ],
-  "license": "Copyright Project",
+  "license": "Copyright 2015 3dpen",
   "private": true,
   "ignore": [
     "node_modules",

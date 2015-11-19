@@ -1,0 +1,29 @@
+extends ../build/templates/master-subpage
+
+block title
+	| #{copy.index.title} - #{copy.press.title}
+
+block styles
+
+block content
+
+	include ../build/includes/mixins
+
+	+banner
+
+	.o-section
+
+		.c-header.c-header--centred
+
+			h1.c-header__title.c-header__title--dark.c-header__title--thin!=copy.press.pageTitle
+				.o-subheading!=copy.press.subheading
+
+			a(href="", title="#{copy.press.download}")
+				svg.o-icon.o-icon--extra-large.o-icon__file-archive(viewBox="0 0 32 32")
+					use(xlink:href="#icon__file-archive")
+
+	#footer.o-section
+
+		include ../build/components/footer
+
+block scripts

@@ -1,0 +1,27 @@
+.c-highlights
+	background				$white
+	padding					$base-spacing-unit
+
+	&__row
+		row()
+
+	&__highlight
+		padding				$base-spacing-unit
+		text-align			center
+		
+		+bp($screen-sm-min)
+			col(4)
+
+		&__image
+			border-radius	50%
+			height			200px
+			// max-width		80%
+			width			200px
+
+		&__title
+			font-weight		300
+			margin-top		0.5em
+
+		&__content
+			font-weight		300
+			text-align		justify

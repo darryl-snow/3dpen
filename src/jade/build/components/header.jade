@@ -1,0 +1,29 @@
+.c-header(style="background-image: url(/images/2.jpg);")
+
+	.c-header__content
+
+		h1.c-header__title!=copy.index.header.title
+			.o-subheading!=copy.index.header.subheading
+
+		.c-header__action
+
+			a.o-button.o-button--primary.c-header__action__button(href="#basic", title="Buy the basic model")!=copy.misc.buyNow
+
+			a.o-button.c-header__action__button(href="#highlights", title="Find out more")!=copy.misc.findOutMore
+
+	ul.c-header__menu
+
+		li.c-header__menu__item
+			a.c-header__menu__item__link(href="#{copy.misc.socialLinks.socialLink1.href}", title="#{copy.misc.socialLinks.socialLink1.title}")
+				svg.o-icon(class="o-icon__#{copy.misc.socialLinks.socialLink1.name}", viewBox="0 0 32 32")
+					use(xlink:href="#icon__#{copy.misc.socialLinks.socialLink1.name}")
+
+		li.c-header__menu__item
+			a.c-header__menu__item__link(href="#{copy.misc.socialLinks.socialLink2.href}", title="#{copy.misc.socialLinks.socialLink2.title}")
+				svg.o-icon(class="o-icon__#{copy.misc.socialLinks.socialLink2.name}", viewBox="0 0 32 32")
+					use(xlink:href="#icon__#{copy.misc.socialLinks.socialLink2.name}")
+
+		li.c-header__menu__item
+			a.c-header__menu__item__link(href="#{copy.misc.socialLinks.socialLink3.href}", title="#{copy.misc.socialLinks.socialLink3.title}")
+				svg.o-icon(class="o-icon__#{copy.misc.socialLinks.socialLink3.name}", viewBox="0 0 32 32")
+					use(xlink:href="#icon__#{copy.misc.socialLinks.socialLink3.name}")

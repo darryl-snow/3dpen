@@ -1,0 +1,28 @@
+.c-promo
+	row()
+
+	&--right
+		flex-direction		row-reverse
+		text-align			right
+
+	&__image-container,
+	&__content-container
+		col(12)
+		padding				$base-spacing-unit
+
+		+bp($screen-sm-min)
+			col(6)
+			height			75vh
+
+	&__image,
+	&__content
+
+		+bp($screen-sm-min)
+			vertical-centre()
+
+	&__image-container
+		text-align			center
+
+	&__image
+		max-height			80%
+		max-width			80%		

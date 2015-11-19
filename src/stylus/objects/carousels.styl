@@ -1,0 +1,141 @@
+.o-carousel
+	relative()
+	row()
+	width						100%
+
+	&__slide
+		background-position		top center
+		background-repeat		no-repeat
+		background-size			cover
+		height					200px
+		height					50vw
+		overflow				hidden
+
+		&__content
+			vertical-centre()
+			padding				$base-spacing-unit
+			width				70%
+
+			&--right
+				margin-left		30%
+
+			+bp($screen-sm-min)
+				width			50%
+
+				&--right
+					margin-left	50%
+
+//customized from slick css
+.slick-slider
+	position relative
+	display block
+	-moz-box-sizing border-box
+	box-sizing border-box
+	-webkit-user-select none
+	-moz-user-select none
+	-ms-user-select none
+	user-select none
+	-webkit-touch-callout none
+	-khtml-user-select none
+	-ms-touch-action pan-y
+	touch-action pan-y
+	-webkit-tap-highlight-color transparent
+
+.slick-list
+	position relative
+	display block
+	overflow hidden
+	margin 0
+	padding 0
+	&:focus
+		outline none
+	&.dragging
+		cursor pointer
+		cursor hand
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+	height 50vw
+	-webkit-transform translate3d(0, 0, 0)
+	-moz-transform translate3d(0, 0, 0)
+	-ms-transform translate3d(0, 0, 0)
+	-o-transform translate3d(0, 0, 0)
+	transform translate3d(0, 0, 0)
+
+.slick-track
+	position relative
+	top 0
+	left 0
+	display block
+	&:after
+		clear both
+
+.slick-track:before,
+.slick-track:after
+	display table
+	content ""
+
+.slick-loading
+	.slick-track
+		visibility hidden
+	.slick-slide
+		visibility hidden
+
+.slick-slide
+	display none
+	float left
+	height 100%
+	min-height 1px
+	img
+		display block
+	&.slick-loading
+		img
+			display none
+	&.dragging
+		img
+			pointer-events none
+
+[dir="rtl"]
+	.slick-slide
+		float right
+
+.slick-initialized
+	.slick-slide
+		display block
+
+.slick-vertical
+	.slick-slide
+		display block
+		height auto
+		border 1px solid transparent
+
+.slick-arrow
+	&.slick-hidden
+		display none
+
+.slick-dots
+	absolute()
+	inline-list()
+	unstyled-list()
+	bottom 0
+	height 1.5rem
+	left 0
+	text-align center
+	width 100%
+
+	button
+		background $white
+		border 1px solid $black
+		border-radius 0
+		display block
+		height 0.75rem
+		margin 0.25rem
+		overflow hidden
+		padding 0
+		text-indent -1000px
+		width 0.75rem
+
+	.slick-active
+
+		button
+			background $black

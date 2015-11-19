@@ -1,0 +1,109 @@
+.c-footer
+	background						$dark-grey-2
+	color							lighten($medium-grey, 20%)
+
+	&__about
+		margin						$base-spacing-unit auto
+		text-align					center
+		width						90%
+		
+		+bp($screen-sm-min)
+			width					50%
+
+	&__links
+		inline-list()
+		unstyled-list()
+		text-align					center
+
+		&__item__link
+			color					$white
+			font-size				1.25rem
+			font-weight				300
+			opacity					0.6
+			padding					0.25em 0.5 * $base-spacing-unit
+			transition				$fast-transition
+
+			+ActiveFocusHover()
+				color				$white
+				opacity				1
+
+	&__social-links
+		inline-list()
+		unstyled-list()
+		text-align					center
+
+		&__item__link
+			color					$white
+			display					block
+			font-size				2rem
+			height					2em
+			opacity					0.1
+			padding					2rem 0.25 * $base-spacing-unit
+			transition				$fast-transition
+
+			.o-icon
+				vertical-centre()
+
+			+ActiveFocusHover()
+				color				$white
+				opacity				1
+
+	&__mailing-list
+		margin						0 auto
+		text-align					center
+		width						90%
+
+		+bp($screen-sm-min)
+			width					50%
+		
+		&__input
+			background				$dark-grey-1
+			border					1px solid lighten($dark-grey-1, 20%)
+			color					$white
+			display					inline-block
+			padding-right			132px
+			width					100%
+
+		&__button
+			absolute()
+			display					inline-block
+			margin					0
+			right					10px
+			top						45%
+			width					20%
+
+			+ActiveFocusHover()
+				background			$light-grey-1
+
+		.o-form
+			relative()
+
+	&__language-changer
+		padding						$base-spacing-unit 0
+		text-align					center
+
+		&__select
+			-webkit-appearance		button
+			-webkit-border-radius	2px
+			-webkit-box-shadow		0px 1px 3px rgba(0, 0, 0, 0.1)
+			-webkit-padding-end		20px
+			-webkit-padding-start	2px
+			-webkit-user-select		none
+			background-image		url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient($dark-grey-2, $dark-grey-1)
+			background-position		97% center
+			background-repeat		no-repeat
+			border					1px solid lighten($dark-grey-1, 20%)
+			color					$medium-grey
+			font-size				inherit
+			overflow				hidden
+			padding					0.3rem 0.667rem
+			text-overflow			ellipsis
+			white-space				nowrap
+			width					300px
+
+	&__copyright
+		background					$dark-grey-1
+		display						block
+		font-size					0.75em
+		padding						0.3 * $base-spacing-unit 0
+		text-align					center

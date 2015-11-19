@@ -17,7 +17,10 @@ padding: 5px;
 """
 
 # 3rd party libraries
-# require "library"
+window.$ = window.jQuery = require "jquery"
 
 # Custom modules
-require "./modules/module.coffee"
+require "./components/carousel.coffee"
+require "./components/features.coffee"
+require "./components/language-changer.coffee"
+require "./components/smooth-scroll.coffee"

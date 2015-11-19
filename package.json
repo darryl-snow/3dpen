@@ -1,10 +1,14 @@
 {
-  "name": "project-template",
+  "name": "3dpen",
   "version": "0.0.0",
   "main": "index.html",
-  "description": "Front-End templates for Project",
+  "description": "Front-End templates for 3dpen",
   "keywords": "",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "lodash": "^3.10.1",
+    "slick-carousel": "^1.5.8"
+  },
   "devDependencies": {
     "coffee-script": "^1.8.0",
     "coffeeify": "^0.7.0",

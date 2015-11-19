@@ -12,7 +12,7 @@ head
 
 	block meta
 
-	link(rel="stylesheet", href="/styles/main.css")
+	link(rel="stylesheet", href="#{base}styles/main.css")
 
 	block styles
 
@@ -37,3 +37,9 @@ head
 	meta(name="msapplication-TileImage", content="images/mstile-144x144.png")
 	meta(name="msapplication-config", content="/images/browserconfig.xml")
 	link(rel="shortcut icon", href="/images/favicon.ico")
+
+	link(rel="alternate", hreflang="en", href="/en")
+	link(rel="alternate", hreflang="x-default", href="/en")
+	link(rel="alternate", hreflang="zh", href="/cn")
+
+	include ../../../images/symbol-defs.svg

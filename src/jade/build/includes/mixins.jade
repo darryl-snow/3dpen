@@ -1,0 +1,65 @@
+mixin banner
+
+	.c-banner
+
+		a.c-banner__link(href="/", title="Go back to the overview page")
+			svg.o-icon.o-icon__arrow-left(viewBox="0 0 32 32", style="vertical-align:middle;")
+				use(xlink:href="#icon__arrow-left")
+			| #{copy.misc.goBack}
+
+mixin carousel-slide(config)
+
+	.o-carousel__slide.c-use-cases__image(style="background-image:url(#{config.image});")
+
+		.o-carousel__slide__content.c-use-cases__content(class="o-carousel__slide__content--#{config.side}")
+
+			h2.c-use-cases__title!=config.title
+
+			p!=config.content
+
+mixin highlight(config)
+
+	.c-highlights__highlight
+
+		img.c-highlights__highlight__image(src="#{config.image}", alt="#{config.title}")
+
+		h2.c-highlights__highlight__title!=config.title
+
+		p.c-highlights__highlight__content!=config.content
+
+mixin product(config)
+
+	.c-product(class="c-product--#{config.side}")
+
+		.c-product__image-container
+
+			img.c-product__image(src="#{config.image}", alt="#{config.title}")
+
+		.c-product__content-container
+
+			.c-product__content
+
+				h2.c-product__content__title!=config.title
+
+				p.c-product__content__introduction!=config.content
+
+				a.c-product__content__link(href="#{config.link}", title="Find out more about #{config.title}")!=copy.misc.moreInfo
+					svg.o-icon.o-icon__arrow-right(viewBox="0 0 32 32")
+						use(xlink:href="#icon__arrow-right")
+
+				.c-product__content__price
+					span.c-product__content__price__currency-symbol!=copy.misc.currencySymbol
+					span.c-product__content__price__value!=config.price
+
+				.c-product__content__buy
+					a.o-button.o-button--primary(href="", title="Buy #{config.title}")!=copy.misc.buyNow
+
+mixin promo(config)
+
+	.c-promo(class="c-promo--#{config.side}")
+
+		.c-promo__image-container
+			img.c-promo__image(src="#{config.image}", alt="#{config.imageAlt}")
+
+		.c-promo__content-container
+			p.c-promo__content!=config.content

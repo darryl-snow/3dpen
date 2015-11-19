@@ -1,0 +1,24 @@
+.o-form
+	
+	&__input
+		background		$white
+		border			none
+		box-shadow		none
+		display			block
+		font-size		1rem
+		padding			0.5 * $base-spacing-unit
+		width			100%
+
+		&:disabled,
+		&[disabled],
+		&.is-disabled,
+		&:disabled ~ label,
+		&[disabled] ~ label,
+		&.is-disabled ~ label
+			cursor		not-allowed
+
+	&__label
+		@extends .small
+		cursor			pointer
+		display			block
+		margin-bottom	0.3em

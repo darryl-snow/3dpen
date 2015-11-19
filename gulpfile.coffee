@@ -15,6 +15,9 @@ pkg			= require "./package.json"
 
 Config =
 	build: "./public/"
+	languages:
+		chinese: require "./src/copy/zh-cn.json"
+		english: require "./src/copy/en-gb.json"
 	name: pkg.name
 	port: 9000
 	publish: false
@@ -65,52 +68,39 @@ gulp.task "stylus", ->
 		showFiles: true
 	.pipe gulp.dest Config.build + "styles"
 
-# Inline the "above the fold" CSS
-
-gulp.task "critical", ->
-
-	critical.generate
-		base: Config.build
-		src: "index.html"
-		dest: Config.build + "styles/main.css"
-		width: 320
-		height: 480
-		minify: true
-		extract: true
-	, (err, output) ->
-		critical.inline
-			base: Config.build
-			src: "index.html"
-			dest: "index.html"
-			minify: true
-
-		gulp.src Config.build + "/*.css", read: false
-		.pipe plugins.clean
-			force: true
-
-# Remove unused CSS
-
-gulp.task "purify", ->
-
-	gulp.src Config.build + "styles/*.css", read: false
-	.pipe plugins.size
-		showFiles: true
-	.pipe plugins.purify Config.build + "**/*.html"
-	.pipe plugins.size
-		showFiles: true
-	.pipe gulp.dest Config.build + "styles"
-
 # Compile Jade
 
 gulp.task "jade", ->
-	gulp.src Config.src + "jade/*.jade"
+
+	# Base
+	gulp.src Config.src + "jade/entry.jade"
 	.pipe plugins.plumber()
 	.pipe plugins.jade
-		pretty: true
+		pretty: !Config.publish
+	.pipe plugins.rename "index.html"
+	.pipe gulp.dest Config.build
+
+	# Chinese
+	gulp.src [Config.src + "jade/!(entry).jade", Config.src + "jade/!(build)/*.jade"]
+	.pipe plugins.plumber()
+	.pipe plugins.jade
+		pretty: !Config.publish
 		data:
+			copy: Config.languages.chinese
 			description: pkg.description
 			keywords: pkg.keywords
-	.pipe gulp.dest Config.build
+	.pipe gulp.dest Config.build + "cn"
+
+	# English
+	gulp.src [Config.src + "jade/!(entry).jade", Config.src + "jade/!(build)/*.jade"]
+	.pipe plugins.plumber()
+	.pipe plugins.jade
+		pretty: !Config.publish
+		data:
+			copy: Config.languages.english
+			description: pkg.description
+			keywords: pkg.keywords
+	.pipe gulp.dest Config.build + "en"
 
 # Optimise images
 
@@ -133,6 +123,9 @@ gulp.task "images", ->
 # Copy additional files
 
 gulp.task "copy-files", ->
+
+	gulp.src "./robots.txt"
+	.pipe gulp.dest Config.build
 	
 	gulp.src Config.src + "lib/**/*"
 	.pipe gulp.dest Config.build + "lib"
@@ -166,6 +159,11 @@ gulp.task "watch", ->
 	plugins.watch Config.src + "jade/**/*.jade", ->
 		gulp.start "jade"
 
+	plugins.watch Config.src + "copy/**/*", ->
+		Config.languages.chinese = require "./src/copy/zh-cn.json"
+		Config.languages.english = require "./src/copy/en-gb.json"
+		gulp.start "jade"
+
 	plugins.watch Config.src + "images/**/*.{jpg,png,gif,svg}", ->
 		gulp.start "images"
 
@@ -183,7 +181,7 @@ gulp.task "server", ->
 	app.listen Config.port
 	lr.listen 35729
 	setTimeout ->
-		open "http://localhost:" + Config.port + "/styleguide.html"
+		open "http://localhost:" + Config.port
 	, 3000
 
 # Update the livereload server
@@ -198,7 +196,7 @@ notifyLivereload = (event) ->
 
 gulp.task "default", ->
 	Config.publish = false
-	run ["coffeescript", "stylus", "jade", "images", "copy-files"], "purify", "watch", "server"
+	run ["coffeescript", "stylus", "jade", "images", "copy-files"], "watch", "server"
 
 gulp.task "deploy", ->
 	Config.publish = true
@@ -207,5 +205,3 @@ gulp.task "deploy", ->
 	run "jade"
 	run "images"
 	run "copy-files"
-	run "critical"
-	run "purify"

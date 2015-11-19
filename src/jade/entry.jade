@@ -1,0 +1,18 @@
+doctype
+html(lang="en")
+
+	head
+
+		script.
+
+			//- test system language and redirect
+
+			var english = navigator.language.indexOf("en") == -1 ? false : true;
+
+			if(english) {
+				window.location.href = window.location.href + "en";
+			} else {
+				window.location.href = window.location.href + "cn";
+			}
+
+	body

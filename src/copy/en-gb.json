@@ -1,0 +1,170 @@
+{
+	"advanced": {
+		"buyButton": "Buy Advanced Model",
+		"imageAlt": "advanced model",
+		"pageTitle": "Advanced Model",
+		"price": "200",
+		"promos": {
+			"promo1": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+			"promo2": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus."
+		},
+		"subheading": "endless possibilities",
+		"title": "Advanced Model"
+	},
+	"basic": {
+		"buyButton": "Buy Basic Model",
+		"imageAlt": "basic model",
+		"pageTitle": "Basic Model",
+		"price": "100",
+		"promos": {
+			"promo1": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+			"promo2": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus."
+		},
+		"subheading": "unleash your creativity",
+		"title": "Basic Model"
+	},
+	"extras": {
+		"buyButton": "Buy Extras",
+		"imageAlt": "extras",
+		"pageTitle": "Extras",
+		"price": "100",
+		"promos": {
+			"promo1": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+			"promo2": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus."
+		},
+		"subheading": "to get the most out of the 3D pen",
+		"title": "Extras"
+	},
+	"index": {
+		"features": {
+			"image": "3D Pen basic edition",
+			"feature1": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Easy squeezy"
+			},
+			"feature2": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Comfortable grip"
+			},
+			"feature3": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Focus LED"
+			}
+		},
+		"footer": {
+			"about": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+			"copyright": "&copy; 2015 3D Pen. All Rights Reserved.",
+			"links": {
+				"link1": {
+					"content": "Press",
+					"title": "Download our press pack"
+				},
+				"link2": {
+					"content": "Warranty &amp; Returns",
+					"title": "Read more about our product warranty and returns policy"
+				},
+				"link3": {
+					"content": "Contact Us",
+					"title": "Send us an email"
+				}
+			},
+			"mailingList": {
+				"button": "sign up",
+				"label": "Enter your email:",
+				"placeholder": "your email address",
+				"subheading": "and receive updates about our products",
+				"title": "Sign up to our mailing list"
+			},
+			"changeLanguage": "换语言"
+		},
+		"header": {
+			"subheading": "Explore new ways to draw",
+			"title": "3D Pen"
+		},
+		"highlights": {
+			"highlight1": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Easy"
+			},
+			"highlight2": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Reliable"
+			},
+			"highlight3": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Affordable"
+			}
+		},
+		"products": {
+			"product1": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"price": "100",
+				"title": "Basic"
+			},
+			"product2": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"price": "200",
+				"title": "Advanced"
+			},
+			"product3": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"price": "100",
+				"title": "Extras"
+			}
+		},
+		"title": "3D Pen",
+		"useCases": {
+			"next": "See the next use case",
+			"previous": "See the previous use case",
+			"useCase1": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Little imaginations"
+			},
+			"useCase2": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Unleash your creativity"
+			},
+			"useCase3": {
+				"content": "Lorem ipsum dolor sit amet, ex dicat recusabo rationibus est. Purto expetendis scribentur ne vis, has ut reque malorum, ius cu accumsan recusabo accusamus.",
+				"title": "Prototype & Demonstrate"
+			}
+		}
+	},
+	"lang": "en",
+	"misc": {
+		"buyNow": "Buy now",
+		"currencySymbol": "¥",
+		"findOutMore": "Find out more",
+		"goBack": "Go back",
+		"language": "/en",
+		"moreInfo": "More info",
+		"socialLinks": {
+			"socialLink1": {
+				"href": "https://www.weibo.com/3dpen",
+				"name": "weibo",
+				"title": "Visit us on Weibo"
+			},
+			"socialLink2": {
+				"href": "https://www.facebook.com/3dpen",
+				"name": "facebook",
+				"title": "Visit us on Facebook"
+			},
+			"socialLink3": {
+				"href": "https://www.twitter.com/3dpen",
+				"name": "twitter",
+				"title": "Visit us on Twitter"
+			}
+		}
+	},
+	"press": {
+		"download": "Download our press pack",
+		"pageTitle": "Press Pack",
+		"subheading": "High-res photos, diagrams, and tech specs",
+		"title": "Press Pack"
+	},
+	"warranty": {
+		"content": "<p>Lorem ipsum dolor sit amet, mea at veri facilisis intellegam. Sit probo harum scripta ex, ridens verear torquatos ad usu. Eam impetus singulis definitiones ne, vidisse dolores tractatos te eum, at eam dolorem officiis periculis. Ne usu ridens consequat elaboraret, commodo scaevola cu usu. Ne vix eius intellegat.</p><p>Delenit mentitum noluisse eum ne. Alia viderer nam ex, ei pro inimicus accusamus voluptatum. Mel ipsum clita decore cu, esse unum euripidis nam ut. Doming corpora platonem his ex. Sale atqui deterruisset no usu.</p><p>Case porro quaerendum at duo, mei vulputate comprehensam at. Rationibus sadipscing eu his. Ne mel magna mollis, no sea probo aeterno quaestio. Pro fierent complectitur ne. Cu est evertitur intellegam repudiandae, cibo mediocritatem pri ex.</p><p>Volumus interesset definitionem nec ne. Tantas tempor sit ne, ius ex docendi atomorum, id modus graeco voluptatibus eum. An iuvaret conclusionemque pri, ut congue aliquam deleniti mea. Magna causae ad quo, cum at dicit latine. Vel elitr percipit ullamcorper id, solum inani pro an. Ex solum platonem suavitate vis, vix dolor principes ut, aliquid graecis invidunt an his.</p><p>Qui dicunt torquatos sadipscing at, doctus volutpat et eam. Justo lucilius ea qui, vero tota repudiare no cum, habeo quaeque referrentur te sea. Libris gubergren eu mei, agam errem voluptaria eu nam, nam id brute alienum concludaturque. No illud commune deseruisse quo, inani corpora sed eu, vero modus deseruisse pro te.</p>",
+		"pageTitle": "Warranty &amp; Returns Policy",
+		"title": "Warranty & Returns Policy"
+	}
+}

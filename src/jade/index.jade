@@ -1,0 +1,52 @@
+extends build/templates/master
+
+block title
+	| #{copy.index.title}
+
+block styles
+
+block content
+
+	include build/includes/mixins
+
+	#header.o-section.o-section--full-height
+
+		include build/components/header
+
+	#highlights.o-section
+
+		.c-highlights
+
+			.c-highlights__row
+
+				+highlight({title: copy.index.highlights.highlight1.title, content: copy.index.highlights.highlight1.content, image: "/images/1.png"})
+
+				+highlight({title: copy.index.highlights.highlight2.title, content: copy.index.highlights.highlight2.content, image: "/images/3.jpg"})
+
+				+highlight({title: copy.index.highlights.highlight3.title, content: copy.index.highlights.highlight3.content, image: "/images/4.jpg"})
+
+	#use-cases.o-section
+
+		include build/components/use-cases
+
+	#features.o-section
+
+		include build/components/features
+
+	#products.o-section
+
+		+product({side: "left", title: copy.index.products.product1.title, content: copy.index.products.product1.content, price: copy.index.products.product1.price, link: "basic", buy: "", image: "/images/5.jpg"})
+
+	.o-section.o-section--grey
+
+		+product({side: "right", title: copy.index.products.product2.title, content: copy.index.products.product2.content, price: copy.index.products.product2.price, link: "advanced", buy: "", image: "/images/7.png"})
+
+	.o-section
+
+		+product({side: "left", title: copy.index.products.product3.title, content: copy.index.products.product3.content, price: copy.index.products.product3.price, link: "extras", buy: "", image: "/images/11.jpg"})
+
+	#footer.o-section
+
+		include build/components/footer
+
+block scripts

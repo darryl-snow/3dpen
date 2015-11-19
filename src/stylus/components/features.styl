@@ -1,0 +1,50 @@
+.c-features
+	relative()
+	height				300vh
+	overflow			hidden
+	width				100%
+
+	&__image
+		absolute()
+		left			50%
+		height			calc(100vh - 3em)
+		top				$base-spacing-unit
+		transform		translateX(-50%)
+		width			auto
+
+		&.is-fixed
+			fixed()
+			
+		&.was-fixed
+			absolute()
+			bottom		$base-spacing-unit
+			top			auto
+
+	&__feature
+		fixed()
+		left			$base-spacing-unit
+		top				calc(200px + 1.5em)
+		transition		$fast-transition
+		width			33.3%
+
+		&__title
+			font-weight	300
+
+		&:nth-of-type(even)
+			text-align	right
+
+		&:nth-of-type(odd)
+			left		auto
+			right		$base-spacing-unit
+
+		&.has-not-been-shown
+			opacity		0
+			transform	translateY(-75%)
+
+		&.is-shown
+			opacity		1
+			transform	translateY(-50%)
+
+		&.has-been-shown
+			opacity		0
+			transform	translateY(25%)

@@ -1,0 +1,65 @@
+.c-product
+	row()
+	padding						$base-spacing-unit
+
+	+bp($screen-sm-min)
+
+		&--right
+			flex-direction		row-reverse
+			text-align			right
+
+			.c-product__content__link
+				justify-content	flex-end
+
+	&__image-container,
+	&__content-container
+		col(12)
+		relative()
+
+		+bp($screen-sm-min)
+			col(6)
+			height				100vh
+
+	&__content,
+	&__image
+
+		+bp($screen-sm-min)
+			vertical-centre()
+
+	&__image
+		display					block
+		height					auto
+		margin					$base-spacing-unit auto
+		max-width				100%
+
+		+bp($screen-sm-min)
+			margin				0 auto
+			max-width			80%
+
+	&__content
+
+		&__title
+			font-size			2rem
+			font-weight			300
+
+		&__introduction
+			margin-bottom		0
+
+		&__price
+			font-weight			300
+
+			&__currency-symbol
+				font-size		1.5rem
+
+			&__value
+				font-size		3rem
+
+		&__link
+			@extends .small
+			display				flex
+			margin-bottom		$base-spacing-unit
+			margin-top			0.5em
+			color				$blue
+
+		&__buy
+			margin-top			0.5 * $base-spacing-unit

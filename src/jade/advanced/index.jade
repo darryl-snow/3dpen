@@ -1,0 +1,47 @@
+extends ../build/templates/master-subpage
+
+block title
+	| #{copy.index.title} - #{copy.advanced.title}
+
+block styles
+
+block content
+
+	include ../build/includes/mixins
+
+	+banner
+
+	.o-section
+
+		.c-header.c-header--centred.c-header--variable-height
+
+			h1.c-header__title.c-header__title--dark.c-header__title--thin!=copy.advanced.pageTitle
+				.o-subheading!=copy.advanced.subheading
+
+			img.c-header__image(src="/images/7.png", alt="#{copy.advanced.imageAlt}")
+
+	.o-section.o-section--grey
+
+		+promo({side: "left", image: "/images/3.jpg", content: copy.advanced.promos.promo1})
+
+	.o-section
+
+		+promo({side: "right", image: "/images/4.jpg", content: copy.advanced.promos.promo2})
+
+	.o-section.o-section--grey
+
+		.c-buy-now
+
+			.c-buy-now__content
+
+				.c-buy-now__price
+					span.c-buy-now__price__currency-symbol!=copy.misc.currencySymbol
+					span.c-buy-now__price__value!=copy.advanced.price
+
+				a.o-button.o-button--large.o-button--primary.c-buy-now__button(href="/", title="#{copy.advanced.buyButton}")!=copy.advanced.buyButton
+
+	#footer.o-section
+
+		include ../build/components/footer
+
+block scripts

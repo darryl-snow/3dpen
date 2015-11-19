@@ -1,0 +1,16 @@
+.c-banner
+	row()
+	background			$dark-grey-1
+	color				$light-grey-1
+	font-size			0.8em
+	
+	&__link
+		col(12)
+		color			darken($light-grey-1, 20%)
+		// display			block
+		// justify-content	flex-end
+		padding			0.25 * $base-spacing-unit $base-spacing-unit
+		transition		$fast-transition
+		
+		+ActiveFocusHover()
+			color		$light-grey-1

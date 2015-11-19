@@ -1,0 +1,59 @@
+.c-header
+	relative()
+	background-position	top center
+	background-repeat	no-repeat
+	background-size		cover
+	height				100%
+	padding				$base-spacing-unit
+	width				100%
+
+	&--variable-height
+		height			auto
+
+	&--centred
+		text-align		center
+
+	&__content
+		vertical-centre()
+		text-align		center
+
+	&__title
+		color			$white
+		font-size		4rem
+		font-weight		800
+
+		+bp($screen-md-min)
+			font-size	5rem
+
+		&--dark
+			color		$medium-grey
+
+		&--no-margin
+			margin		0
+
+		&--small
+			font-size	2rem
+
+		&--thin
+			font-weight	300
+
+	&__action__button
+		margin			0 0.5 * $base-spacing-unit
+
+	&__menu
+		absolute()
+		inline-list()
+		unstyled-list()
+		right			0
+		top				0
+
+		&__item__link
+			color		$dark-grey-2
+			display		block
+			opacity		0.6
+			padding		0.5rem 0.3rem
+			transition	$fast-transition
+
+			+ActiveFocusHover()
+				color	$dark-grey-2
+				opacity	1

@@ -1,0 +1,28 @@
+extends ../build/templates/master-subpage
+
+block title
+	| #{copy.index.title} - #{copy.warranty.title}
+
+block styles
+
+block content
+
+	include ../build/includes/mixins
+
+	+banner
+
+	.o-section
+
+		.c-header.c-header--centred.c-header--variable-height
+
+			h1.c-header__title.c-header__title--dark.c-header__title--thin.c-header__title--small.c-header__title--no-margin!=copy.warranty.pageTitle
+
+	.o-section
+
+		.o-section__subsection!=copy.warranty.content
+
+	#footer.o-section
+
+		include ../build/components/footer
+
+block scripts
